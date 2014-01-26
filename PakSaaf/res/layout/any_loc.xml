@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/green"
+    tools:context=".AnyLoc" >
+
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Please input a location."
+            android:textColor="#FFFFFF"
+            android:textSize="40sp" />
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/location"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:text="Submit"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="#FFFFFF"
+            android:textSize= "20sp"
+            android:onClick = "submit" />
+
+        <ImageView
+            android:id="@+id/anyloc"
+            android:layout_width="wrap_content"
+            android:layout_height="75sp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/anyloc" />
+
+        <EditText
+            android:id="@+id/latitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/longitude"
+            android:layout_below="@+id/anyloc"
+            android:ems="10"
+            android:textColor="#FFFFFF"
+            android:inputType="numberDecimal"
+            android:hint="Latitude" >
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:id="@+id/longitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/latitude"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:textColor="#FFFFFF"
+            android:hint="Longitude" />
+
+</RelativeLayout>
